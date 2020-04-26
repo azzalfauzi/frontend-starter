@@ -1,0 +1,115 @@
+.clearfix {
+  @include clearfix();
+}
+
+@each $color, $value in $theme-colors {
+  .link-#{$color} {
+    color: $value;
+
+    @if $emphasized-link-hover-darken-percentage != 0 {
+      &:hover,
+      &:focus {
+        color: darken($value, $emphasized-link-hover-darken-percentage);
+      }
+    }
+  }
+}
+
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    display: block;
+    content: "";
+  }
+
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+@each $key, $ratio in $embed-responsive-aspect-ratios {
+  .embed-responsive-#{$key} {
+    &::before {
+      padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
+    }
+  }
+}
+
+// Shorthand
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+// Responsive sticky top
+@supports (position: sticky) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      .sticky#{$infix}-top {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
+      }
+    }
+  }
+}
+
+//
+// Screenreaders
+//
+
+.sr-only,
+.sr-only-focusable:not(:focus) {
+  @include sr-only();
+}
+
+//
+// Stretched link
+//
+
+.stretched-link {
+  &::#{$stretched-link-pseudo-element} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $stretched-link-z-index;
+    content: "";
+  }
+}
+
+//
+// Text truncation
+//
+
+.text-truncate {
+  @include text-truncate();
+}

@@ -1,0 +1,38 @@
+// Form Image
+.form-image {
+    position: relative;
+    width: 120px;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    &-file {
+        display: none;
+    }
+
+    &-copy {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        /* height: 100%; */
+        /* display: flex; */
+        /* justify-content: center; */
+        text-align: center;
+        transform: translateY(-50%);
+    }
+    
+    &-preview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.10);
+    }
+}

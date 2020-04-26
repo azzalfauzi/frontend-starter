@@ -1,0 +1,16 @@
+$icon-prefix: 'icon-'; 
+
+@import "_icons.scss";
+
+.icon {
+    vertical-align: middle;
+    pointer-events: none;
+
+    &-2x {
+        font-size: 2em;
+    }
+
+    &-3x {
+        font-size: 3em;
+    }
+}
