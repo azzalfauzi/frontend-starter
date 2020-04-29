@@ -48,6 +48,10 @@
 @import "components/component.spinners";
 @import "components/component.dashboard";
 
+@import "components/component.header";
+@import "components/component.sidebar";
+@import "components/component.body";
+
 
 // Helpers
 
@@ -59,8 +63,3 @@
 // Utilities
 
 @import "utilities/utility.api";
-
-
-body {
-  background: aqua
-}

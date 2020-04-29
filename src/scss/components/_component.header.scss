@@ -1,0 +1,29 @@
+// Header
+$header-height: 48px;
+$header-z-index: 1002;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background: $primary;
+  z-index: $header-z-index;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+  &-container {
+    @extend .container;
+  }
+
+  &-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: $header-height;
+  }
+
+  // Offset Sibling Elements
+  ~ * {
+    padding-top: $header-height;
+  }
+}

@@ -32,6 +32,11 @@ const PATHS = {
     JS: "./dist/js",
     DOCS_HTML: "./docs",
   },
+  watch: {
+    SCSS: "./src/scss/**/*.scss",
+    JS: ["./src/js/*.js"],
+    DOCS_PUG: "./docs-src/*.pug",
+  },
 };
 
 /**
@@ -86,9 +91,9 @@ function liveServer() {
   browserSync({
     server: "./",
   });
-  watch(PATHS.source.SCSS, buildCSS);
-  watch(PATHS.source.JS, buildJS);
-  watch(PATHS.source.DOCS_PUG, buildHTML);
+  watch(PATHS.watch.SCSS, buildCSS);
+  watch(PATHS.watch.JS, buildJS);
+  watch(PATHS.watch.DOCS_PUG, buildHTML);
   watch(PATHS.output.DOCS_HTML).on("change", reload);
 }
 

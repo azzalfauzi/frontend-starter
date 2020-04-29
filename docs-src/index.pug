@@ -1,10 +1,26 @@
+doctype html
 html
   head
     title Gulp, SASS + Pug Templates
     link(href='../dist/css/main.css' rel='stylesheet')
   body
-    h1 Gulp, SASS + Pug Templates
-    p HERE IS COOOL
-    ul
-      each val, index in locals
-        li= index + ': ' + val
+    header.header
+      .header-container
+        .header-inner
+          .header-brand
+            | FRONTEND STARTER
+    aside.sidebar.show
+      .sidebar-inner
+        span.text-small.mb-3.text-muted MENU
+        ul.sidebar-menu
+          li.sidebar-menu-item.active
+            a.sidebar-menu-link(href="") HOME
+          li.sidebar-menu-item
+            a.sidebar-menu-link(href="") GENERAL COMPONENTS
+          li.sidebar-menu-item
+            a.sidebar-menu-link(href="") FORMS
+          li.sidebar-menu-item
+            a.sidebar-menu-link(href="") UTILITIES
+    main.body
+      | CONTENT
+
