@@ -35,7 +35,7 @@ const PATHS = {
   watch: {
     SCSS: "./src/scss/**/*.scss",
     JS: ["./src/js/*.js"],
-    DOCS_PUG: "./docs-src/*.pug",
+    DOCS_PUG: "./docs-src/**/*.pug",
   },
 };
 
@@ -48,7 +48,7 @@ function buildCSS() {
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(PATHS.output.CSS))
     .pipe(dest(PATHS.output.CSS))
     .pipe(reload({ stream: true }));
 }

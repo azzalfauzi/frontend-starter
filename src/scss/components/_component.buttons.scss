@@ -3,24 +3,21 @@
 //
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   color: $body-color;
-  text-align: center;
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
-  @include button-size(
-    $btn-padding-y,
-    $btn-padding-x,
-    $btn-font-size,
-    $btn-border-radius
-  );
+  height: $btn-height;
+  @include button-size(0, $btn-padding-x, $btn-font-size, $btn-border-radius);
   @include transition($btn-transition);
 
   &:hover {
@@ -109,6 +106,7 @@
     $btn-font-size-lg,
     $btn-border-radius-lg
   );
+  height: $btn-height-lg;
 }
 
 .btn-sm {
@@ -118,6 +116,7 @@
     $btn-font-size-sm,
     $btn-border-radius-sm
   );
+  height: $btn-height-sm;
 }
 
 //
@@ -134,13 +133,47 @@
   }
 }
 
-// 
+//
 // With icon
-// 
+//
 .btn > .icon + span {
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .btn > span + .icon {
-  margin-left: .5em;
+  margin-left: 0.5em;
+}
+
+//
+// Button Loading
+//
+.btn.loading {
+  position: relative;
+  color: transparent;
+  background: $gray-200;
+  border-color: $gray-200;
+  border-top: 1px solid $gray-300;
+  pointer-events: none;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: calc(50% - .5em);
+    left: calc(50% - .5em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    border-top-color: transparent;
+    animation: spin 600ms linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }

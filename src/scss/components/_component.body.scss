@@ -2,4 +2,8 @@
 
 .body {
   min-height: 100vh;
+
+  &-container {
+    padding: 12px 16px;
+  }
 }

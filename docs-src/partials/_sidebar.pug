@@ -1,0 +1,17 @@
+aside.sidebar.show
+  .sidebar-inner
+    .text-12.tracking-wide.text-muted.mb-3 MENU
+    ul.sidebar-menu
+      li.sidebar-menu-item(class=(menu == 'Dashboard' && 'active'))
+        a.sidebar-menu-link(href="./") Dashboard
+      li.sidebar-menu-item(class=(menu == 'Basic Components' && 'active'))
+        a.sidebar-menu-link(href="./components.html") Basic Components
+      li.sidebar-menu-item(class=(menu == 'Forms' && 'active'))
+        a.sidebar-menu-link(href="./forms.html") Forms
+      li.sidebar-menu-item
+        a.sidebar-menu-link(href="") Utilities
+    ul.sidebar-menu.mt-auto
+      li.sidebar-menu-item
+        a.sidebar-menu-link(href="") Settings
+      li.sidebar-menu-item
+        a.sidebar-menu-link(href="") Logout

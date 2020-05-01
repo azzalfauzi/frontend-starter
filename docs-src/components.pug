@@ -1,0 +1,40 @@
+extends ./partials/_$layout.pug
+
+block vars
+  - var title = 'FS - Components'
+  - var menu = 'Basic Components'
+
+block body
+  #buttons.font-weight-bold.tracking-wide BUTTONS
+  div.py-3
+    .text-12.mb-2 STYLE / COLOR
+    div
+      a.btn.mr-2.mb-2(href="#") NORMAL
+      a.btn.btn-primary.mr-2.mb-2(href="#") PRIMARY
+      a.btn.btn-secondary.mr-2.mb-2(href="#") SECONDARY
+      a.btn.btn-success.mr-2.mb-2(href="#") SUCCESS
+      a.btn.btn-info.mr-2.mb-2(href="#") INFO
+      a.btn.btn-warning.mr-2.mb-2(href="#") WARNING
+      a.btn.btn-danger.mr-2.mb-2(href="#") DANGER
+    div
+      a.btn.btn-outline-primary.mr-2.mb-2(href="#") PRIMARY
+      a.btn.btn-outline-secondary.mr-2.mb-2(href="#") SECONDARY
+      a.btn.btn-outline-success.mr-2.mb-2(href="#") SUCCESS
+      a.btn.btn-outline-info.mr-2.mb-2(href="#") INFO
+      a.btn.btn-outline-warning.mr-2.mb-2(href="#") WARNING
+      a.btn.btn-outline-danger.mr-2.mb-2(href="#") DANGER
+
+  div.py-3
+    .text-12.mb-2 STATE
+    a.btn.btn-primary.mr-2.mb-2(href="#") NORMAL
+    a.btn.btn-primary.disabled.mr-2.mb-2(href="#") DISABLED
+    a.btn.btn-primary.active.mr-2.mb-2(href="#") ACTIVE
+    a.btn.btn-primary.loading.mr-2.mb-2(href="#") LOADING
+
+  div.py-3
+    .text-12.mb-2 SIZE
+    div
+      a.btn.btn-primary.btn-sm.mr-2.mb-2(href="#") SMALL
+      a.btn.btn-primary.mr-2.mb-2(href="#") NORMAL
+      a.btn.btn-primary.btn-lg.mr-2.mb-2(href="#") LARGE
+

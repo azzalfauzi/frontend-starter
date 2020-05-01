@@ -1,1 +1,1 @@
-const fun = () => console.log("DONE");
+require('./UI');
