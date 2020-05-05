@@ -2,14 +2,30 @@ aside.sidebar.show
   .sidebar-inner
     .text-12.tracking-wide.text-muted.mb-3 MENU
     ul.sidebar-menu
+      li.sidebar-menu-item(class=(menu == 'Readme' && 'active'))
+        a.sidebar-menu-link(href="./readme.html")
+          i.icon.icon-book.mr-2
+          b Readme
       li.sidebar-menu-item(class=(menu == 'Dashboard' && 'active'))
-        a.sidebar-menu-link(href="./") Dashboard
+        a.sidebar-menu-link(href="./")
+          i.icon.icon-template.mr-2
+          | Dashboard
       li.sidebar-menu-item(class=(menu == 'Basic Components' && 'active'))
-        a.sidebar-menu-link(href="./components.html") Basic Components
+        a.sidebar-menu-link(href="./components.html")
+          i.icon.icon-box.mr-2
+          | Basic Components
+      li.sidebar-menu-item(class=(menu == 'Adv. Components' && 'active'))
+        a.sidebar-menu-link(href="")
+          i.icon.icon-codesandbox.mr-2
+          | Adv. Components
       li.sidebar-menu-item(class=(menu == 'Forms' && 'active'))
-        a.sidebar-menu-link(href="./forms.html") Forms
+        a.sidebar-menu-link(href="./forms.html")
+          i.icon.icon-clipboard.mr-2
+          | Forms
       li.sidebar-menu-item
-        a.sidebar-menu-link(href="") Utilities
+        a.sidebar-menu-link(href="")
+          i.icon.icon-copy.mr-2
+          | Utilities
     ul.sidebar-menu.mt-auto
       li.sidebar-menu-item
         a.sidebar-menu-link(href="") Settings

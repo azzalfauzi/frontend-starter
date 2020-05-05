@@ -5,4 +5,45 @@ block vars
   - var menu = 'Dashboard'
 
 block body
-  | DASHBOARD
+  .px-3.py-2.shadow-3.mb-4 DASHBOARD
+
+  div.px-4
+    .row.gutter-1
+      .col-md-6.col-lg-5
+        .row.gutter-1
+          .col-md-12.col-lg-6
+            .card.height-100
+              .card-body.py-3.px-4
+                .text-12.tracking-wide.text-muted MARKETING
+                .text-32 124.4 M
+          .col-md-12.col-lg-6
+            .card.height-100
+              .card-body.py-3.px-4
+                .text-12.tracking-wide.text-muted CONVERSION
+                .text-24 537
+                .text-12.tracking-wide.text-success +22% of target
+
+      .col-md-6.col-lg-7
+        .card
+          .table-responsive
+            table.table.mb-0
+              thead
+                tr
+                  th # ORDER ID - Name
+                  th(width="100px")
+              tbody
+                tr
+                  td 001 - MSI GS66 AMD Ryzen
+                  td.text-right
+                    a.btn.btn-sm.btn-outline-secondary
+                      i.icon.icon-eye
+                tr
+                  td 002 - MSI GS66 AMD Ryzen
+                  td.text-right
+                    a.btn.btn-sm.btn-outline-secondary
+                      i.icon.icon-eye
+                tr
+                  td 003 - MSI GS66 AMD Ryzen
+                  td.text-right
+                    a.btn.btn-sm.btn-outline-secondary
+                      i.icon.icon-eye

@@ -14,6 +14,10 @@ const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const uglify = require("gulp-uglify");
 
+// Iconfont processor dependencies
+const iconfont = require("gulp-iconfont");
+const iconfontCss = require("gulp-iconfont-css");
+
 // Live server and auto reload dependencies
 var browserSync = require("browser-sync");
 var reload = browserSync.reload;
@@ -26,11 +30,15 @@ const PATHS = {
     SCSS: "./src/scss/main.scss",
     JS: ["./src/js/main.js"],
     DOCS_PUG: "./docs-src/*.pug",
+    ICONFONT_TEMPLATE: "./src/scss/_icons-template.scss",
+    ICONFONT_SVG: "./src/svg/*.svg",
   },
   output: {
     CSS: "./dist/css",
     JS: "./dist/js",
     DOCS_HTML: "./docs",
+    ICONFONT: "dist/fonts/",
+    ICONFONT_CSS: "../css/icons.css",
   },
   watch: {
     SCSS: "./src/scss/**/*.scss",
@@ -74,7 +82,7 @@ function buildJS() {
  * Compile pug files into HTML
  */
 function buildHTML() {
-  console.log('PUG LO INI')
+  console.log("PUG LO INI");
   return src(PATHS.source.DOCS_PUG)
     .pipe(pug())
     .pipe(dest(PATHS.output.DOCS_HTML));
@@ -82,6 +90,30 @@ function buildHTML() {
 
 function pugHandler() {
   return series(buildHTML, reload)();
+}
+
+/**
+ * Generate iconfont
+ */
+function buildIconfont() {
+  return src([PATHS.source.ICONFONT_SVG])
+    .pipe(
+      iconfontCss({
+        fontName: "icon",
+        path: PATHS.source.ICONFONT_TEMPLATE,
+        targetPath: PATHS.output.ICONFONT_CSS,
+        fontPath: '../../' + PATHS.output.ICONFONT,
+      })
+    )
+    .pipe(
+      iconfont({
+        fontName: "icon",
+        fontHeight: 1001,
+        normalize: true,
+        formats: ['svg', 'ttf', 'eot', 'woff', 'woff2']
+      })
+    )
+    .pipe(dest(PATHS.output.ICONFONT));
 }
 
 /**
@@ -100,4 +132,5 @@ function liveServer() {
 exports.css = buildCSS;
 exports.js = buildJS;
 exports.html = buildHTML;
+exports.icons = buildIconfont;
 exports.default = parallel(buildCSS, buildJS, buildHTML, liveServer);

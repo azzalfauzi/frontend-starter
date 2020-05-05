@@ -113,3 +113,21 @@
 .text-truncate {
   @include text-truncate();
 }
+
+//
+// Shadow
+//
+
+@each $key, $shadow in $shadows {
+  .shadow-#{$key} {
+    box-shadow: #{$shadow};
+  }
+}
+
+
+//
+// Layout
+//
+.height-100 {
+  height: 100%;
+}

@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "icon";
+	src: url('../../dist/fonts/icon.eot');
+	src: url('../../dist/fonts/icon.eot?#iefix') format('eot'),
+		url('../../dist/fonts/icon.woff2') format('woff2'),
+		url('../../dist/fonts/icon.woff') format('woff'),
+		url('../../dist/fonts/icon.ttf') format('truetype'),
+		url('../../dist/fonts/icon.svg#icon') format('svg');
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon:before {
+  font-family: "icon";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+}
+
+
+.icon-book:before {
+	content: "\E001";
+}
+
+.icon-box:before {
+	content: "\E002";
+}
+
+.icon-clipboard:before {
+	content: "\E003";
+}
+
+.icon-codesandbox:before {
+	content: "\E004";
+}
+
+.icon-copy:before {
+	content: "\E005";
+}
+
+.icon-eye:before {
+	content: "\E006";
+}
+
+.icon-layout:before {
+	content: "\E007";
+}
+
+.icon-menu:before {
+	content: "\E008";
+}
+
+.icon-template:before {
+	content: "\E009";
+}
