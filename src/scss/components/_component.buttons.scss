@@ -97,6 +97,7 @@
 
 //
 // Button Sizes
+// size names: ss, xs, sm, lg, xl, sl
 //
 
 .btn-lg {
@@ -124,7 +125,9 @@
 //
 
 .btn-block {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 
   // Vertically space out multiple block buttons
@@ -148,7 +151,7 @@
 // Button icon
 //
 .btn-icon {
-  padding: 0 calc(.5em + 1px);
+  padding: 0 calc(0.5em + 1px);
 }
 
 //
@@ -165,8 +168,8 @@
   &:before {
     position: absolute;
     content: "";
-    top: calc(50% - .5em);
-    left: calc(50% - .5em);
+    top: calc(50% - 0.5em);
+    left: calc(50% - 0.5em);
     width: 1em;
     height: 1em;
     border-radius: 50%;

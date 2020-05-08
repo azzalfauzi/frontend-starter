@@ -8,7 +8,7 @@ block body
   .body-container
     #buttons.font-weight-bold.tracking-wide BUTTONS
     div.py-3
-      .text-12.mb-2 STYLE / COLOR
+      .text-12.lh-1-3.mb-2 STYLE / COLOR
       div
         a.btn.mr-2.mb-2(href="#") NORMAL
         a.btn.btn-primary.mr-2.mb-2(href="#") PRIMARY
@@ -37,29 +37,73 @@ block body
 
 
     div.py-3
-      .text-12.mb-2 STATE
+      .text-12.lh-1-3.mb-2 STATE
       a.btn.btn-primary.mr-2.mb-2(href="#") NORMAL
       a.btn.btn-primary.disabled.mr-2.mb-2(href="#") DISABLED
       a.btn.btn-primary.active.mr-2.mb-2(href="#") ACTIVE
       a.btn.btn-primary.loading.mr-2.mb-2(href="#") LOADING
 
     div.py-3
-      .text-12.mb-2 SIZE
+      .text-12.lh-1-3.mb-2 SIZE
       div
         a.btn.btn-primary.btn-sm.mr-2.mb-2(href="#") SMALL
         a.btn.btn-primary.mr-2.mb-2(href="#") NORMAL
         a.btn.btn-primary.btn-lg.mr-2.mb-2(href="#") LARGE
 
     #icons.font-weight-bold.tracking-wide ICONS
-      div.py-3.text-24
-        i.icon.icon-box.mr-3.mb-2
-        i.icon.icon-book.mr-3.mb-2
-        i.icon.icon-clipboard.mr-3.mb-2
-        i.icon.icon-codesandbox.mr-3.mb-2
-        i.icon.icon-copy.mr-3.mb-2
-        i.icon.icon-layout.mr-3.mb-2
-        i.icon.icon-menu.mr-3.mb-2
-        i.icon.icon-template.mr-3.mb-2
+    div.py-3.text-24
+      i.icon.icon-box.mr-3.mb-2
+      i.icon.icon-book.mr-3.mb-2
+      i.icon.icon-clipboard.mr-3.mb-2
+      i.icon.icon-codesandbox.mr-3.mb-2
+      i.icon.icon-copy.mr-3.mb-2
+      i.icon.icon-layout.mr-3.mb-2
+      i.icon.icon-menu.mr-3.mb-2
+      i.icon.icon-template.mr-3.mb-2
+
+
+    #cards.font-weight-bold.tracking-wide CARDS
+    .py-3
+      .row.gutter-1
+        .col-md-4.col-lg-3
+          .card
+            .img-square
+              img(src="../dist/img/photo-1.jpg" alt="card image")
+            .card-body.py-3.px-4
+              .text-24.lh-1-25 The Great Mountain
+              .text-12.lh-1-3.tracking-wide.text-muted EGYPT, AFRICA
+        .col-md-4.col-lg-3
+          .card.height-100
+            .d-flex.px-3.py-2
+              .img-square.img-circle(style="width: 42px")
+                img(src="../dist/img/person.jpg" alt="person")
+              .flex-fill.pl-3
+                .text-18.lh-1-3 Title goes here
+                .text-12.lh-1-25.text-muted Secondary text
+            .img-half
+              img(src="../dist/img/photo-1.jpg" alt="card image")
+            .card-body.py-3.px-4
+              .text-14.lh-1-3.text-muted
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi ab unde?
+            .card-footer
+              .row.gutter-1
+                .col-6
+                  a.btn.btn-block.btn-primary.btn-sm(href="#") Read more
+                .col-6
+                  a.btn.btn-block.btn-outline-secondary.btn-sm(href="#") Bookmark
+        .col-md-3.col-lg-2
+          .card.mb-3
+            .card-body.py-3.px-4
+              .text-12.lh-1-3.tracking-wide.text-muted MARKETING
+              .text-32 124.4 M
+          .card
+            .card-body.py-3.px-4
+              .text-12.lh-1-3.tracking-wide.text-muted CONVERSION
+              .text-24 537
+              .text-12.lh-1-3.tracking-wide.text-success +22% of target
+        .col-md-3.col-lg-2
+
+
 
 
 
