@@ -3,86 +3,101 @@
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
-$font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.3 !default;
 
-$line-height-base:            1.5 !default;
-$line-height-lg:              2 !default;
-$line-height-sm:              1.25 !default;
+$type-heights: (
+  12: 16px,
+  14: 16px,
+  16: 20px,
+  18: 24px,
+  24: 28px,
+  32: 40px,
+) !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$type-sizes: (
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  24: 24px,
+  32: 32px,
+) !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        null !default;
-$headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              null !default;
+$type-trackings: (
+  wide: 0.1em,
+  wider: 0.15em,
+) !default;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$type-sizes-list: to-list($type-sizes, 'values');
+$type-sizes-length: length($type-sizes);
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
-$display-line-height:         $headings-line-height !default;
+$h1-font-size: nth($type-sizes-list, $type-sizes-length) !default;
+$h2-font-size: nth($type-sizes-list, $type-sizes-length - 1) !default;
+$h3-font-size: nth($type-sizes-list, $type-sizes-length - 2) !default;
+$h4-font-size: nth($type-sizes-list, $type-sizes-length - 3) !default;
+$h5-font-size: nth($type-sizes-list, $type-sizes-length - 4) !default;
+$h6-font-size: nth($type-sizes-list, $type-sizes-length - 5) !default;
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
 
-$small-font-size:             .875em !default;
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
 
-$sub-sup-font-size:           .75em !default;
+$small-font-size: 0.875em !default;
 
-$text-muted:                  $gray-600 !default;
+$sub-sup-font-size: 0.75em !default;
 
-$initialism-font-size:        $small-font-size !default;
+$text-muted: $gray-600 !default;
 
-$blockquote-small-color:      $gray-600 !default;
-$blockquote-small-font-size:  $small-font-size !default;
-$blockquote-font-size:        $font-size-base * 1.25 !default;
+$initialism-font-size: $small-font-size !default;
 
-$hr-color:                    inherit !default;
-$hr-height:                   $border-width !default;
-$hr-opacity:                  .25 !default;
+$blockquote-small-color: $gray-600 !default;
+$blockquote-small-font-size: $small-font-size !default;
+$blockquote-font-size: $font-size-base * 1.25 !default;
 
-$legend-margin-bottom:        .5rem !default;
-$legend-font-size:            1.5rem !default;
-$legend-font-weight:          null !default;
+$hr-color: inherit !default;
+$hr-height: $border-width !default;
+$hr-opacity: 0.25 !default;
 
-$mark-padding:                .2em !default;
+$legend-margin-bottom: 0.5rem !default;
+$legend-font-size: 1.5rem !default;
+$legend-font-weight: null !default;
 
-$dt-font-weight:              $font-weight-bold !default;
+$mark-padding: 0.2em !default;
 
-$nested-kbd-font-weight:      $font-weight-bold !default;
+$dt-font-weight: $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$nested-kbd-font-weight: $font-weight-bold !default;
 
-$mark-bg:                     #fcf8e3 !default;
+$list-inline-padding: 0.5rem !default;
 
-$hr-margin-y:                 $spacer !default;
+$mark-bg: #fcf8e3 !default;
+
+$hr-margin-y: $spacer !default;

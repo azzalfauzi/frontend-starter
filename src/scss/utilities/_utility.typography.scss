@@ -1,14 +1,5 @@
 // Sizing
-$type_scales: (
-  12: 12px,
-  14: 14px,
-  16: 16px,
-  18: 18px,
-  24: 24px,
-  32: 32px,
-) !default;
-
-@each $key, $value in $type_scales {
+@each $key, $value in $type-sizes {
   .text-#{$key} {
     font-size: $value
   }
@@ -16,12 +7,7 @@ $type_scales: (
 
 
 // Tracking or letter spacing
-$letter_spacings: (
-  wide: .1em,
-  wider: .15em,
-) !default;
-
-@each $key, $value in $letter_spacings {
+@each $key, $value in $type-trackings {
   .tracking-#{$key} {
     letter-spacing: $value
   }

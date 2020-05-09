@@ -24,6 +24,7 @@
 	text-decoration: none;
   text-transform: none;
   display: inline-block;
+  vertical-align: middle;
 }
 
 
@@ -61,4 +62,8 @@
 
 .icon-template:before {
 	content: "\E009";
+}
+
+.icon-type:before {
+	content: "\E00A";
 }
