@@ -3,7 +3,7 @@ aside.sidebar.show
     .text-12.tracking-wide.text-muted.mb-3 MENU
     ul.sidebar-menu
       li.sidebar-menu-item(class=(menu == 'Readme' && 'active'))
-        a.sidebar-menu-link(href="./readme.html")
+        a.sidebar-menu-link(href="./index.html")
           i.icon.icon-book.mr-2
           b Readme
       li.sidebar-menu-item(class=(menu == 'Typography' && 'active'))
@@ -22,12 +22,7 @@ aside.sidebar.show
         a.sidebar-menu-link(href="./forms.html")
           i.icon.icon-clipboard.mr-2
           | Forms
-      li.sidebar-menu-item
-        a.sidebar-menu-link(href="")
+      li.sidebar-menu-item(class=(menu == 'Utilities' && 'active'))
+        a.sidebar-menu-link(href="./utilities.html")
           i.icon.icon-copy.mr-2
           | Utilities
-    ul.sidebar-menu.mt-auto
-      li.sidebar-menu-item
-        a.sidebar-menu-link(href="") Settings
-      li.sidebar-menu-item
-        a.sidebar-menu-link(href="") Logout
