@@ -1,11 +1,37 @@
-((context) => {
-  const _$ = context.document.querySelector.bind(context.document);
+window.UI = (() => {
+  const _$ = document.querySelector.bind(document);
+  const _$$ = document.querySelectorAll.bind(document);
 
   // Sidebar
-  const $sidebar = _$('.sidebar');
-  context.toggleSidebar = () => {
-    $sidebar.classList.toggle('toggled');
+  const $sidebar = _$(".sidebar");
+  window.toggleSidebar = () => {
+    $sidebar.classList.toggle("toggled");
+  };
+
+  // Tab
+  function tab($currentButton, id) {
+    const $currentPanel = _$("#" + id);
+
+    if (!$currentPanel) return;
+
+    $currentButton
+      .closest(".tab-navs")
+      .querySelector(".active")
+      .classList.remove("active");
+
+    $currentPanel
+      .closest('.tab')
+      .querySelector('.tab-panel.active')
+      .classList.remove("active");
+
+    $currentButton.closest(".tab-nav").classList.add("active");
+    $currentPanel.classList.add("active");
+
+    $currentButton.blur();
   }
 
-})(window)
-
+  return {
+    toggleSidebar,
+    tab,
+  };
+})();

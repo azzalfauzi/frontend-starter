@@ -10,15 +10,26 @@ block body
       | Components that require JavaScript to work including any third-party library (e.g. select2, sweetalert)
 
     div.mb-4
+      #tab.font-weight-bold.tracking-wide.mb-4 TAB
+      .card
+        .tab
+          ul.tab-navs
+            li.tab-nav.active
+              button.tab-button(onclick="UI.tab(this, 'all')") All
+            li.tab-nav
+              button.tab-button(onclick="UI.tab(this, 'one')") One
+            li.tab-nav
+              button.tab-button(onclick="UI.tab(this, 'two')") Two
+          .tab-panel#all.active All tab content
+          .tab-panel#one One tab content
+          .tab-panel#two Two tab content
+
+    div.mb-4
       #buttons.font-weight-bold.tracking-wide DROPDOWN
       .text-danger NOT IMPLEMENTED
 
     div.mb-4
       #buttons.font-weight-bold.tracking-wide MODAL
-      .text-danger NOT IMPLEMENTED
-
-    div.mb-4
-      #buttons.font-weight-bold.tracking-wide TAB
       .text-danger NOT IMPLEMENTED
 
     div.mb-4
