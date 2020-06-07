@@ -26,3 +26,17 @@ aside.sidebar.show
         a.sidebar-menu-link(href="./utilities.html")
           i.icon.icon-copy.mr-2
           | Utilities
+      li.sidebar-menu-item.sidebar-menu-parent(class=(menu.includes('Example') && 'active'))
+        a.sidebar-menu-link()
+          i.icon.icon-layout.mr-2
+          | Examples
+        ul.sidebar-menu
+          li.sidebar-menu-item(class=(menu == 'Example-Form' && 'active'))
+            a.sidebar-menu-link(href="./example-form.html")
+              | Form
+          li.sidebar-menu-item(class=(menu == 'Example-ListTable' && 'active'))
+            a.sidebar-menu-link(href="./example-list-table.html")
+              | List Table
+          li.sidebar-menu-item(class=(menu == 'Example-ListCard' && 'active'))
+            a.sidebar-menu-link(href="./example-list-card.html")
+              | List Card

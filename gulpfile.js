@@ -82,7 +82,6 @@ function buildJS() {
  * Compile pug files into HTML
  */
 function buildHTML() {
-  console.log("PUG LO INI");
   return src(PATHS.source.DOCS_PUG)
     .pipe(pug())
     .pipe(dest(PATHS.output.DOCS_HTML));

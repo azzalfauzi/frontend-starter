@@ -28,6 +28,8 @@
     "vinyl-source-stream": "2.0.0"
   },
   "scripts": {
+    "dev": "gulp",
+    "icons": "gulp icons",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
