@@ -11,8 +11,7 @@
 @import "tools/tools.functions";
 @import "settings/all";
 @import "tools/tools.mixins";
-@import "utilities/all";
-
+@import "tools/tools.placeholders";
 
 // Layout & components
 
@@ -53,13 +52,11 @@
 @import "components/component.sidebar";
 @import "components/component.body";
 
-
 // Helpers
 
 @import "utilities/utility.transitions";
 @import "utilities/utility.background";
 @import "utilities/utility.general";
-
 
 // Utilities
 

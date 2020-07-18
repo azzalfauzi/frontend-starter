@@ -97,6 +97,9 @@ $utilities: map-merge(
           75: 75%,
           100: 100%,
           auto: auto,
+          // Fixed
+          300: 300px,
+          500: 500px
         ),
       ),
     "max-width": (
@@ -426,17 +429,17 @@ $utilities: map-merge(
       values: $spacers,
     ),
     // Text
-      "font-weight":
-      (
-        property: font-weight,
-        values: (
-          light: $font-weight-light,
-          lighter: $font-weight-lighter,
-          normal: $font-weight-normal,
-          bold: $font-weight-bold,
-          bolder: $font-weight-bolder,
-        ),
+    "font-weight":
+    (
+      property: font-weight,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder,
       ),
+    ),
     "text-transform": (
       property: text-transform,
       class: text,

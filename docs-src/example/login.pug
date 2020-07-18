@@ -1,0 +1,23 @@
+extends ../partials/_$layout-example.pug
+
+block vars
+  - var title = 'Example - Login'
+  - var menu = 'Example'
+
+block body
+  form.min-vh-100.d-flex.align-items-center.justify-content-center.bg-light
+    .mw-100.w-300.py-3.py-5.px-3.px-5.bg-white.rounded-lg.shadow-sm
+      .py-1.px-1
+        h1.text-24.font-weight-bold.lh-1.mb-5 Login Page
+        .form-group
+          label Username
+          input.form-control(type="text")
+        .form-group
+          label Password
+          input.form-control(type="password")
+        .text-right.text-12.mb-4
+          a(href="#") Forgot Password?
+        button.btn.btn-block.btn-primary.mb-4 Login
+        .text-center.text-12.pt-2
+          span.mx-1 Don't have one?
+          a(href="register.html").mx-1 Register Now

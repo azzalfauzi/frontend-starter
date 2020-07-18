@@ -29,7 +29,7 @@ const PATHS = {
   source: {
     SCSS: "./src/scss/main.scss",
     JS: ["./src/js/main.js"],
-    DOCS_PUG: "./docs-src/*.pug",
+    DOCS_PUG: "./docs-src/**/[^_]*.pug",
     ICONFONT_TEMPLATE: "./src/scss/_icons-template.scss",
     ICONFONT_SVG: "./src/svg/*.svg",
   },

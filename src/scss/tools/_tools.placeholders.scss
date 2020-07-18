@@ -1,0 +1,6 @@
+// Typography Size
+@each $key, $value in $type-sizes {
+  %text-#{$key} {
+    font-size: $value
+  }
+}

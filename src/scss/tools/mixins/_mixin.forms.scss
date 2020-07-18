@@ -129,4 +129,9 @@
       }
     }
   }
+
+  // form hint
+  .is-#{$state} ~ .form-hint {
+    color: $color;
+  }
 }
