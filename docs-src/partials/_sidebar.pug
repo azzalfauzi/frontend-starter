@@ -31,12 +31,18 @@ aside.sidebar.show
           i.icon.icon-layout.mr-2
           | Examples
         ul.sidebar-menu
+          li.sidebar-menu-item
+            a.sidebar-menu-link(href="example/login.html")
+              | Login
+          li.sidebar-menu-item
+            a.sidebar-menu-link(href="example/register.html")
+              | Register
           li.sidebar-menu-item(class=(menu == 'Example-Form' && 'active'))
-            a.sidebar-menu-link(href="./example-form.html")
+            a.sidebar-menu-link(href="#")
               | Form
           li.sidebar-menu-item(class=(menu == 'Example-ListTable' && 'active'))
-            a.sidebar-menu-link(href="./example-list-table.html")
+            a.sidebar-menu-link(href="#")
               | List Table
           li.sidebar-menu-item(class=(menu == 'Example-ListCard' && 'active'))
-            a.sidebar-menu-link(href="./example-list-card.html")
+            a.sidebar-menu-link(href="#")
               | List Card

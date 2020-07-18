@@ -1,14 +1,13 @@
 // Sizing
 @each $key, $value in $type-sizes {
   .text-#{$key} {
-    font-size: $value
+    @extend %text-#{$key};
   }
 }
-
 
 // Tracking or letter spacing
 @each $key, $value in $type-trackings {
   .tracking-#{$key} {
-    letter-spacing: $value
+    letter-spacing: $value;
   }
 }

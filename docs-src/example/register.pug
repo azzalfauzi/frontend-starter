@@ -1,0 +1,32 @@
+extends ../partials/_$layout-example.pug
+
+block vars
+  - var title = 'Example - Register'
+  - var menu = 'Example'
+
+block body
+  form.min-vh-100.d-flex.align-items-center.justify-content-center.bg-light
+    .mw-100.w-300.my-3
+      .py-3.py-5.px-3.px-5.bg-white.rounded-lg.shadow-sm.mb-5
+        .py-1.px-1
+          h1.font-weight-bold.text-18.lh-1.mb-5 Create a new account
+          .form-group.row.gutter-sm
+            .col-6
+              label First name
+              input.form-control(type="text")
+            .col-6
+              label Last name
+              input.form-control(type="text")
+          .form-group
+            label Username
+            input.form-control(type="text")
+          .form-group
+            label Email
+            input.form-control(type="email")
+          .form-group
+            label Create a password
+            input.form-control(type="password")
+          button.btn.btn-block.btn-primary Register
+      .text-center.text-12
+        span.mx-1 Already have an account?
+        a(href="login.html").mx-1 Login

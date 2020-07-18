@@ -1,0 +1,8 @@
+// Form hint
+//
+// Gives description about the input state
+
+.form-hint {
+  @extend %text-12;
+  line-height: 1rem;
+}

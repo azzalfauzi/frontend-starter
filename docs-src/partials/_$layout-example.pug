@@ -7,10 +7,7 @@ html
     link(href='/dist/css/main.css' rel='stylesheet')
     link(href='/dist/css/icons.css' rel='stylesheet')
   body
-    include ./_header.pug
-    include ./_sidebar.pug
-    main.body
-      block body
+    block body
 
   block preScript
   script(src="../dist/js/bundle.js")
